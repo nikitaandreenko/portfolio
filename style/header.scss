@@ -1,0 +1,148 @@
+.header {
+  &__logo {
+    @include size(73px, 27px);
+  }
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include padding-top-bottom(5, 3);
+  }
+  &__menu-nav {
+    display: flex;
+    align-items: center;
+    padding-top: $basic-indent;
+    gap: 30px;
+  }
+  &__menu-links {
+    padding: 5px 0px;
+    color: $white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0px 2px 2px $white;
+    }
+  }
+  &__theme-button-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    @include size(56px, 32px);
+    background: #ffec70;
+    border-radius: 32px;
+  }
+  &__theme-image {
+    @include size(20px, 20px);
+  }
+  &__theme-circle {
+    @include size(24px, 24px);
+    background: #fffded;
+    border-radius: 12px;
+  }
+  &__button {
+    padding: 25px 25px 17px;
+    background: #925ff0;
+    border-radius: 4px;
+    color: $white;
+  }
+}
+
+#theme__sun {
+  display: none;
+}
+
+.theme__checkbox {
+  display: none;
+  &:checked
+    ~ .theme__box
+    .header
+    .container
+    .header__menu
+    .header__theme-button-box
+    .header__button {
+    background-color: $dark-text;
+  }
+  &:checked ~ .theme__box {
+    background: $white;
+  }
+  &:checked
+    ~ .theme__box
+    .header
+    .container
+    .header__menu
+    .header__logo
+    #header__logo-light {
+    display: block;
+  }
+  .theme__checkbox:checked
+    ~ .theme__box
+    .header
+    .container
+    .header__menu
+    .header__logo
+    #header__logo-dark {
+    display: none;
+  }
+  &:checked
+    ~ .theme__box
+    .header
+    .container
+    .header__menu
+    .header__logo
+    #header__logo-dark {
+    display: none;
+  }
+
+  &:checked
+    ~ .theme__box
+    .header
+    .container
+    .header__menu
+    .header__theme-button-box
+    .header__theme {
+    flex-direction: row-reverse;
+    background: #051724;
+  }
+  &:checked
+    ~ .theme__box
+    .header
+    .container
+    .header__menu
+    .header__theme-button-box
+    #theme__moon {
+    display: none;
+  }
+  &:checked
+    ~ .theme__box
+    .header
+    .container
+    .header__menu
+    .header__theme-button-box
+    #theme__sun {
+    display: block;
+  }
+  &:checked
+    ~ .theme__box
+    .header
+    .container
+    .header__menu
+    .header__menu-nav
+    .header__menu-nav-item
+    .header__menu-links {
+    color: $dark-text;
+    &:hover {
+      box-shadow: 0px 2px 2px $dark-text;
+    }
+  }
+}
+
+#header__logo-light {
+  display: none;
+}

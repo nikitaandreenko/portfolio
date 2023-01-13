@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Gotham'), local('Raleway Regular'), url('../fonts/GothamBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Anton'), local('Anton Regular'), url('../fonts/Anton-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Poppins Italic';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Poppins'), local('Poppins Italic'), url('../fonts/Poppins-Italic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Poppins'), local('Poppins Regular'), url('../fonts/Poppins-Regular.woff') format('woff');
+}

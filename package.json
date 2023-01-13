@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikitaandreenko/portfolio.git"
+  },
+  "author": "Mikita Andreyenka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikitaandreenko/portfolio/issues"
+  },
+  "homepage": "https://github.com/nikitaandreenko/portfolio#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.2",
+    "parcel": "^2.8.2"
+  }
+}

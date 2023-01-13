@@ -1,0 +1,15 @@
+@mixin font($fz, $lh) {
+  font-size: $fz;
+  line-height: $lh;
+}
+@mixin fontsize($fz) {
+  font-size: $fz;
+}
+@mixin size($wh, $ht) {
+    width: $wh;
+    height: $ht;
+}
+@mixin padding-top-bottom($top, $bootom) {
+    padding-top: $basic-indent * $top;
+    padding-bottom: $basic-indent * $bootom;
+}
