@@ -14,8 +14,7 @@ h1 {
   font-family: "Anton", sans-serif;
   color: $white;
   font-weight: 400;
-  font-size: 173px;
-  line-height: 90%;
+  @include font(173px, 90%);
   letter-spacing: -0.03em;
   text-transform: uppercase;
 }
@@ -54,6 +53,7 @@ button {
   transition: all 0.4s;
   &:hover {
     cursor: pointer;
+    opacity: 0.8;
   }
 }
 

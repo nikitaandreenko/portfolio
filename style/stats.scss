@@ -1,0 +1,62 @@
+.stats {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 77px;
+    padding: 82px 100px;
+    @include shell(#0b0b0b, #646464, 29px);
+  }
+  &__content {
+  }
+  &__figures {
+    margin: 0;
+    margin-bottom: 40px;
+    color: $green-light;
+    font-family: "Anton", sans-serif;
+    @include font(128px, 90%);
+  }
+  &__text {
+    margin: 0;
+    color: $green-light;
+    font-weight: 500;
+    @include font(36px, 100%);
+    letter-spacing: -0.05em;
+    text-align: center;
+  }
+  &__icons-box {
+    @include size(80px, 80px);
+  }
+  &__icon-dark {
+    @include size(100%, 100%);
+  }
+  &__icon-light {
+    @include size(100%, 100%);
+    display: none;
+  }
+}
+.theme__checkbox {
+  display: none;
+  &:checked ~ .theme__box .stats .container .stats__wrapper {
+    @include shell(#f6fff6, $black, 29px);
+  }
+}
+.theme__checkbox {
+  display: none;
+  &:checked ~ .theme__box .stats .container .stats__wrapper .stats__content {
+    .stats__icons-box {
+      .stats__icon-dark {
+        display: none;
+      }
+      .stats__icon-light {
+        display: block;
+      }
+    }
+    .stats__figures {
+      color: $green-dark;
+    }
+    .stats__text {
+      color: $green-dark;
+    }
+  }
+}
