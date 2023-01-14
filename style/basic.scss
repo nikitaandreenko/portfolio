@@ -5,7 +5,34 @@
 body {
   margin: 0;
   font-family: "Gotham", sans-serif;
+  letter-spacing: -0.05em;
   background-color: $black;
+}
+
+h1 {
+  margin: 0px;
+  font-family: "Anton", sans-serif;
+  color: $white;
+  font-weight: 400;
+  font-size: 173px;
+  line-height: 90%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.theme__checkbox {
+  display: none;
+  &:checked
+    ~ .theme__box
+    .greetings
+    .greetings__wrapper
+    .greetings__content
+    .greetings__title {
+    background: $dark-text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+h2 {
 }
 
 img {
@@ -21,10 +48,12 @@ li {
 
 button {
   font-family: "Gotham", sans-serif;
-  @include fontsize(16px);
+  color: $white;
+  border: none;
+  @include fontsize(20px);
+  transition: all 0.4s;
   &:hover {
     cursor: pointer;
-    transform: scale(1.1);
   }
 }
 

@@ -1,0 +1,106 @@
+.greetings {
+  margin-bottom: 145px;
+  &__wrapper {
+    display: flex;
+    gap: 20;
+  }
+  &__content-box{
+    display: flex;
+    width: calc((820px * 100%) / 1530px);
+  }
+  &__content {
+    @include padding-top-bottom(4, 4);
+    width: calc((660px * 100%) / 820px);
+  }
+  &__title {
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  &__name {
+    font-size: 92px;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__social-media {
+    display: flex;
+    justify-content: space-between;
+    gap: 70;
+    margin-bottom: 40px;
+  }
+  &__social-media-item {
+    @include size(52px, 52px);
+  }
+  &__social-media-links {
+  }
+  &__instagram-light,
+  &__figma-light,
+  &__linkedin-light,
+  &__twitter-light,
+  &__telegram-light,
+  &__medium-light {
+    display: none;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    background-color: $dark-text;
+    width: 100%;
+    height: 52px;
+  }
+  .greetings-button-text{
+    color: $white;
+    padding-top: 12px;
+  }
+  &__button-icon{
+    @include size(20px, 20px);
+  }
+  &__icon {
+    width: calc((160px * 100%) / 820px);
+  }
+  &__icon-box {
+    @include size(160px, 160px);
+  }
+  &__image-box {
+    width: calc((694px * 100%) / 1530px);
+    max-height: 778px;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.theme__checkbox {
+  display: none;
+  &:checked
+    ~ .theme__box
+    .greetings
+    .container
+    .greetings__wrapper
+    .greetings__content
+    .greetings__social-media
+    .greetings__social-media-item
+    .greetings__social-media-links {
+    .greetings__instagram-light,
+    .greetings__figma-light,
+    .greetings__linkedin-light,
+    .greetings__twitter-light,
+    .greetings__telegram-light,
+    .greetings__medium-light {
+      display: block;
+    }
+    .greetings__instagram-dark,
+    .greetings__figma-dark,
+    .greetings__linkedin-dark,
+    .greetings__twitter-dark,
+    .greetings__telegram-dark,
+    .greetings__medium-dark {
+      display: none;
+    }
+  }
+}
