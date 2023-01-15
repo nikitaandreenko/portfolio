@@ -18,20 +18,14 @@ h1 {
   letter-spacing: -0.03em;
   text-transform: uppercase;
 }
-.theme__checkbox {
-  display: none;
-  &:checked
-    ~ .theme__box
-    .greetings
-    .greetings__wrapper
-    .greetings__content
-    .greetings__title {
-    background: $dark-text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
+
 h2 {
+  margin: 0px;
+  font-family: "Anton", sans-serif;
+  color: $white;
+  font-weight: 400;
+  @include font(64px, 100%);
+  text-transform: uppercase;
 }
 
 img {
@@ -48,6 +42,7 @@ li {
 button {
   font-family: "Gotham", sans-serif;
   color: $white;
+  letter-spacing: -0.05em;
   border: none;
   @include fontsize(20px);
   transition: all 0.4s;

@@ -4,7 +4,7 @@
     display: flex;
     gap: 20;
   }
-  &__content-box{
+  &__content-box {
     display: flex;
     width: calc((820px * 100%) / 1530px);
   }
@@ -47,22 +47,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:10px;
+    gap: 10px;
     background-color: $dark-text;
     @include size(100%, 52px);
   }
-  .greetings-button-text{
+  .greetings-button-text {
     color: $white;
     padding-top: 12px;
   }
-  &__button-icon{
+  &__button-icon {
     @include size(20px, 20px);
   }
   &__icon {
     width: calc((160px * 100%) / 820px);
+    padding-top: 40px;
   }
   &__icon-box {
     @include size(160px, 160px);
+  }
+  &__icon-light {
+    display: none;
   }
   &__image-box {
     width: calc((694px * 100%) / 1530px);
@@ -72,7 +76,6 @@
     @include size(100%, 100%);
   }
 }
-
 .theme__checkbox {
   display: none;
   &:checked
@@ -80,25 +83,39 @@
     .greetings
     .container
     .greetings__wrapper
-    .greetings__content
-    .greetings__social-media
-    .greetings__social-media-item
-    .greetings__social-media-links {
-    .greetings__instagram-light,
-    .greetings__figma-light,
-    .greetings__linkedin-light,
-    .greetings__twitter-light,
-    .greetings__telegram-light,
-    .greetings__medium-light {
-      display: block;
-    }
-    .greetings__instagram-dark,
-    .greetings__figma-dark,
-    .greetings__linkedin-dark,
-    .greetings__twitter-dark,
-    .greetings__telegram-dark,
-    .greetings__medium-dark {
-      display: none;
+    .greetings__content-box {
+    .greetings__content {
+      .greetings__social-media
+        .greetings__social-media-item
+        .greetings__social-media-links {
+        .greetings__instagram-light,
+        .greetings__figma-light,
+        .greetings__linkedin-light,
+        .greetings__twitter-light,
+        .greetings__telegram-light,
+        .greetings__medium-light {
+          display: block;
+        }
+        .greetings__instagram-dark,
+        .greetings__figma-dark,
+        .greetings__linkedin-dark,
+        .greetings__twitter-dark,
+        .greetings__telegram-dark,
+        .greetings__medium-dark {
+          display: none;
+        }
+      }
+      .greetings__icon .greetings__icon-box .greetings__icon-dark {
+        display: none;
+      }
+      .greetings__icon-light {
+        display: block;
+      }
+      .greetings__title {
+        background: $dark-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
 }

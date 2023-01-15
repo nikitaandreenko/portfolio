@@ -52,14 +52,14 @@ h1 {
   line-height: 90%;
 }
 
-.theme__checkbox {
-  display: none;
-}
-
-.theme__checkbox:checked ~ .theme__box .greetings .greetings__wrapper .greetings__content .greetings__title {
-  background: #292929;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+h2 {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: Anton, sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 100%;
 }
 
 img {
@@ -75,6 +75,7 @@ ul, li {
 
 button {
   color: #fff;
+  letter-spacing: -.05em;
   border: none;
   font-family: Gotham, sans-serif;
   font-size: 20px;
@@ -280,11 +281,16 @@ button:hover {
 
 .greetings__icon {
   width: 19.5122%;
+  padding-top: 40px;
 }
 
 .greetings__icon-box {
   width: 160px;
   height: 160px;
+}
+
+.greetings__icon-light {
+  display: none;
 }
 
 .greetings__image-box {
@@ -301,12 +307,26 @@ button:hover {
   display: none;
 }
 
-.theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__instagram-light, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__figma-light, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__linkedin-light, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__twitter-light, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__telegram-light, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__medium-light {
+.theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__instagram-light, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__figma-light, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__linkedin-light, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__twitter-light, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__telegram-light, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__medium-light {
   display: block;
 }
 
-.theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__instagram-dark, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__figma-dark, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__linkedin-dark, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__twitter-dark, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__telegram-dark, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__medium-dark {
+.theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__instagram-dark, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__figma-dark, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__linkedin-dark, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__twitter-dark, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__telegram-dark, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__social-media .greetings__social-media-item .greetings__social-media-links .greetings__medium-dark, .theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__icon .greetings__icon-box .greetings__icon-dark {
   display: none;
+}
+
+.theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__icon-light {
+  display: block;
+}
+
+.theme__checkbox:checked ~ .theme__box .greetings .container .greetings__wrapper .greetings__content-box .greetings__content .greetings__title {
+  background: #292929;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stats {
+  margin-bottom: 210px;
 }
 
 .stats__wrapper {
@@ -374,6 +394,101 @@ button:hover {
 
 .theme__checkbox:checked ~ .theme__box .stats .container .stats__wrapper .stats__content .stats__figures, .theme__checkbox:checked ~ .theme__box .stats .container .stats__wrapper .stats__content .stats__text {
   color: #64c661;
+}
+
+.portfolio__title {
+  margin-bottom: 36px;
+}
+
+.portfolio__wrapper {
+  flex-wrap: wrap;
+  gap: 27px;
+  display: flex;
+}
+
+.portfolio__item {
+  background: #0b0b0b;
+  border: 1px solid #737373;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.portfolio__image-box {
+  width: 300px;
+  height: 200px;
+  margin-bottom: 23px;
+}
+
+.portfolio__image {
+  width: 100%;
+  height: 100%;
+  letter-spacing: -.05em;
+  border-radius: 10px;
+}
+
+.portfolio__item-title {
+  color: #fff;
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.portfolio__content {
+  justify-content: left;
+  gap: 5px;
+  margin-bottom: 23px;
+  display: flex;
+}
+
+.portfolio__content-item {
+  width: 94px;
+  height: 24px;
+  background: #e9dffc;
+  border: 1px solid #be9ff6;
+  border-radius: 12px;
+}
+
+.portfolio__content-item-text {
+  letter-spacing: -.05em;
+  color: #784dc7;
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.portfolio__button {
+  width: 100%;
+  color: #fff;
+  background: #292929;
+  padding: 23px 0 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.portfolio__links {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.theme__checkbox {
+  display: none;
+}
+
+.theme__checkbox:checked ~ .theme__box .portfolio .container .portfolio__title {
+  color: #292929;
+}
+
+.theme__checkbox:checked ~ .theme__box .portfolio .container .portfolio__wrapper .portfolio__item {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.theme__checkbox:checked ~ .theme__box .portfolio .container .portfolio__wrapper .portfolio__item .portfolio__item-title {
+  color: #292929;
 }
 
 /*# sourceMappingURL=index.def16a1e.css.map */
