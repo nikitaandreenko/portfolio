@@ -1,0 +1,37 @@
+.review {
+  background: url("../image/review/bgc_dark.png");
+  background-size: cover;
+  padding: 147px 0px;
+  &__wrapper {
+    width: calc((1094px * 100%) / 1530px);
+    margin: 0 auto;
+  }
+  &__author {
+    font-family: "Poppins", sans-serif;
+    @include font(48px, 105%);
+    letter-spacing: -0.05em;
+    color: $white;
+    text-align: center;
+  }
+  &__text {
+    margin: 60px auto;
+    font-family: "Poppins Italic", sans-serif;
+    @include font(48px, 105%);
+    letter-spacing: -0.05em;
+    color: $white;
+  }
+  &__icon {
+    @include size(100%, 100%);
+    &-box {
+      @include size(72px, 86px);
+      margin: 0 auto;
+    }
+  }
+}
+.theme__checkbox {
+  display: none;
+  &:checked ~ .theme__box .review {
+    background: url("../image/review/bgc_light.png");
+    background-size: cover;
+  }
+}
