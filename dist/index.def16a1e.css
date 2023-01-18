@@ -585,6 +585,7 @@ button:hover {
 
 .review {
   background: url("bgc_dark.037c32b0.png") 0 0 / cover;
+  margin-bottom: 200px;
   padding: 147px 0;
 }
 
@@ -605,6 +606,7 @@ button:hover {
 .review__text {
   letter-spacing: -.05em;
   color: #fff;
+  text-align: center;
   margin: 60px auto;
   font-family: Poppins Italic, sans-serif;
   font-size: 48px;
@@ -628,6 +630,116 @@ button:hover {
 
 .theme__checkbox:checked ~ .theme__box .review {
   background: url("bgc_light.581fdd72.png") 0 0 / cover;
+}
+
+.about {
+  margin-bottom: 315px;
+}
+
+.about__wrapper {
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 50%);
+  display: grid;
+}
+
+.about__text {
+  width: 86.9281%;
+  letter-spacing: -.05em;
+  color: #fff;
+  align-self: center;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.about__skills-text-span {
+  background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 7px;
+  display: inline-block;
+}
+
+.about__new-text {
+  justify-self: end;
+}
+
+.about__new-text-green {
+  background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 7px;
+  display: inline-block;
+}
+
+.about__new-text-blue {
+  background: linear-gradient(90deg, #8fd3f4 0%, #84fab0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 7px;
+  display: inline-block;
+}
+
+.about__extra-text-name {
+  background: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 7px;
+  display: inline-block;
+}
+
+.about__extra-text-achive {
+  background: linear-gradient(90deg, #ffe76a 0%, #65c8ff 70%, red 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 7px;
+  display: inline-block;
+}
+
+.about__title-box {
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 76px;
+  display: flex;
+}
+
+.about__title-icon-light {
+  display: none;
+}
+
+.about__title-icon-box {
+  width: 266.74px;
+  height: 29.45px;
+}
+
+.about__image-box {
+  width: 100%;
+  height: 530px;
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+}
+
+.theme__checkbox {
+  display: none;
+}
+
+.theme__checkbox:checked ~ .theme__box .about .container .about__wrapper .about__skills .about__title-box .about__title {
+  color: #292929;
+}
+
+.theme__checkbox:checked ~ .theme__box .about .container .about__wrapper .about__skills .about__title-box .about__title-icon-box .about__title-icon-dark {
+  display: none;
+}
+
+.theme__checkbox:checked ~ .theme__box .about .container .about__wrapper .about__skills .about__title-box .about__title-icon-box .about__title-icon-light {
+  display: block;
+}
+
+.theme__checkbox:checked ~ .theme__box .about .container .about__wrapper .about__text {
+  color: #292929;
 }
 
 /*# sourceMappingURL=index.def16a1e.css.map */

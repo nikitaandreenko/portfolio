@@ -2,6 +2,7 @@
   background: url("../image/review/bgc_dark.png");
   background-size: cover;
   padding: 147px 0px;
+  margin-bottom: 200px;
   &__wrapper {
     width: calc((1094px * 100%) / 1530px);
     margin: 0 auto;
@@ -19,6 +20,7 @@
     @include font(48px, 105%);
     letter-spacing: -0.05em;
     color: $white;
+    text-align: center;
   }
   &__icon {
     @include size(100%, 100%);

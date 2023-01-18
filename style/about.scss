@@ -1,0 +1,99 @@
+.about {
+    margin-bottom: 315px;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  &__text {
+    align-self: center;
+    width: calc((665px * 100%) / 765px);
+    @include font(36px, 36px);
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    color: $white;
+  }
+
+  &__skills-text-span {
+    display: inline-block;
+    padding-top: 7px;
+    background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__new-text {
+    justify-self: end;
+    &-green {
+      display: inline-block;
+      padding-top: 7px;
+      background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &-blue {
+      display: inline-block;
+      padding-top: 7px;
+      background: linear-gradient(90deg, #8fd3f4 0%, #84fab0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &__extra-text {
+    &-name {
+      display: inline-block;
+      padding-top: 7px;
+      background: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &-achive {
+      display: inline-block;
+      padding-top: 7px;
+      background: linear-gradient(90deg, #ffe76a 0%, #65c8ff 70%, #ff0000 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &__title-box {
+    display: flex;
+    gap: 40;
+    margin-bottom: 76px;
+    align-items: center;
+  }
+
+  &__title-icon-light {
+    display: none;
+  }
+  &__title-icon-box {
+    @include size(266.74px, 29.45px);
+  }
+  &__image-box {
+    @include size(100%, 530px);
+  }
+  &__image {
+    @include size(100%, 100%);
+  }
+}
+
+.theme__checkbox {
+  display: none;
+  &:checked ~ .theme__box .about .container .about__wrapper {
+    .about__skills .about__title-box {
+      .about__title {
+        color: $dark-text;
+      }
+      .about__title-icon-box {
+        .about__title-icon-dark {
+          display: none;
+        }
+        .about__title-icon-light {
+          display: block;
+        }
+      }
+    }
+    .about__text{
+        color: $dark-text;
+    }
+  }
+}
