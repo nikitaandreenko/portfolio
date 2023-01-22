@@ -1,5 +1,5 @@
 .about {
-    margin-bottom: 315px;
+    margin-bottom: 330px;
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -73,6 +73,7 @@
   }
   &__image {
     @include size(100%, 100%);
+    object-fit: cover;
   }
 }
 

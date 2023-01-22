@@ -40,20 +40,76 @@ li {
   list-style-type: none;
 }
 
-button {
+a {
+  text-decoration: none; 
+ }
+
+button, .button {
   font-family: "Gotham", sans-serif;
   color: $white;
   letter-spacing: -0.05em;
   border: none;
-  @include fontsize(20px);
+  @include font(16px, 16px);
   transition: all 0.4s;
   &:hover {
     cursor: pointer;
     opacity: 0.8;
   }
 }
+.menu-nav {
+    display: flex;
+    align-items: center;
+    padding-top: $basic-indent;
+    gap: 30px;
+    @include font(20px, 20px);
+    letter-spacing: -0.05em;
+    @media (max-width: 768px) {
+      position: absolute;
+      top: 100px;
+      right: 0;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding-bottom: 50px;
+      padding-top: 50px;
+      background-color: $dark-text;
+
+
+    }
+  }
+  .menu-links {
+    padding: 5px 0px;
+    color: $white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0px 2px 2px $white;
+    }
+  }
 
 .container {
   margin: 0 auto;
   max-width: 1530px;
+  @media (max-width: 1530px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.input {
+  padding: 10px 10px 20px;
+  font-family: "Poppins", sans-serif;
+  color: $white;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid $white;
+  &::-moz-placeholder { color: $white; }
+  &::-webkit-input-placeholder { color: $white; }
+  &:focus {
+    outline-color: #0d156b;
+  }
+  @media (max-width: 1530px) {
+    padding: 5px 5px 10px;
+
+}
 }

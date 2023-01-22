@@ -1,12 +1,22 @@
 .stats {
-  margin-bottom: 210px;
+  margin-bottom: 200px;
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(1, 1fr);
     align-items: center;
     gap: 77px;
+    width: 100%;
     padding: 82px 100px;
     @include shell(#0b0b0b, #646464, 29px);
+    @media (max-width: 1150px) {
+      padding-left: 50px;
+      padding-right: 50px;
+  gap:126;
+     }
   }
   &__content {
   }
@@ -27,6 +37,9 @@
   }
   &__icons-box {
     @include size(80px, 80px);
+    @media (max-width: 1400px) {
+     display: none;
+    }
   }
   &__icon-dark {
     @include size(100%, 100%);

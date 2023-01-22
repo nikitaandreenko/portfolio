@@ -1,25 +1,43 @@
 .greetings {
   margin-bottom: 145px;
+  padding-top: 185px;
   &__wrapper {
     display: flex;
     gap: 20;
+    width: 100%;
+    @media (max-width: 1240px) {
+      justify-content: center;
+    }
+
+   
   }
   &__content-box {
     display: flex;
     width: calc((820px * 100%) / 1530px);
+    @media (max-width: 1240px) {
+      width: 660px;
+    }
+  
   }
   &__content {
     @include padding-top-bottom(4, 4);
-    width: calc((660px * 100%) / 820px);
+    // width: calc((660px * 100%) / 820px);
+    width: 660px;
+   
   }
   &__title {
-    width: 100%;
-    margin-bottom: 70px;
+   
   }
   &__name {
-    font-size: 92px;
+    margin: 0px;
+    margin-bottom: 135px;
+    margin-top: 5px;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    @include font(92px, 100%);
+    width: 100%;
     text-transform: uppercase;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -29,6 +47,8 @@
     justify-content: space-between;
     gap: 70;
     margin-bottom: 40px;
+    
+
   }
   &__social-media-item {
     @include size(52px, 52px);
@@ -61,6 +81,9 @@
   &__icon {
     width: calc((160px * 100%) / 820px);
     padding-top: 40px;
+    @media (max-width: 1530px) {
+      display: none;
+    }
   }
   &__icon-box {
     @include size(160px, 160px);
@@ -71,9 +94,13 @@
   &__image-box {
     width: calc((694px * 100%) / 1530px);
     max-height: 778px;
+    @media (max-width: 1240px) {
+      display: none;
+    }
   }
   &__image {
     @include size(100%, 100%);
+    object-fit: cover;
   }
 }
 .theme__checkbox {

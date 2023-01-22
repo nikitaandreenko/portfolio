@@ -1,11 +1,12 @@
 .skills {
-  margin-bottom: 200px;
+  margin-bottom: 160px;
   &__title {
     padding-bottom: 50px;
   }
   &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 17;
   }
   &__item {
@@ -14,11 +15,17 @@
     @include shell(#010101, #737373, 10px);
     padding: 40px 50px 60px 40px;
     width: calc((755.5 * 100%) / 1530);
+    width: 100%;
   }
   &__stats {
     position: relative;
     @include size(220px, 220px);
+    &:hover .skills__icon{
+      cursor: pointer;
+      animation-play-state: paused;
+    }
   }
+
   &__figures {
     position: absolute;
     top: 40%;
@@ -31,6 +38,10 @@
   }
   &__icon {
     @include size(100%, 100%);
+    animation-name: rotate-stats;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
   &__content {
     width: calc((425.5 * 100%) / 665.5);
@@ -69,5 +80,13 @@
         }
       }
     }
+  }
+}
+@keyframes rotate-stats{
+  0%{
+    transform: rotateX(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
   }
 }

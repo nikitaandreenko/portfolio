@@ -18,6 +18,7 @@
   "homepage": "https://github.com/nikitaandreenko/portfolio#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.2",
-    "parcel": "^2.8.2"
+    "parcel": "^2.8.2",
+    "sharp": "^0.31.3"
   }
 }
