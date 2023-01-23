@@ -1,6 +1,14 @@
 .greetings {
   margin-bottom: 145px;
   padding-top: 185px;
+  @media (max-width: 1024px) {
+    padding-top: 150px;
+    margin-bottom: 190px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 120px;
+    margin-bottom: 50px;
+  }
   &__wrapper {
     display: flex;
     gap: 20;
@@ -8,8 +16,6 @@
     @media (max-width: 1240px) {
       justify-content: center;
     }
-
-   
   }
   &__content-box {
     display: flex;
@@ -17,22 +23,24 @@
     @media (max-width: 1240px) {
       width: 660px;
     }
+    @media (max-width: 768px) {
+      width: 366px;
+    }
+    @media (max-width: 430px) {
+      width: 100%;
+    }
   
   }
   &__content {
-    @include padding-top-bottom(4, 4);
-    // width: calc((660px * 100%) / 820px);
+    padding-top: 40px;
+    padding-bottom: 40px;
     width: 660px;
    
   }
-  &__title {
-   
-  }
   &__name {
-    margin: 0px;
     margin-bottom: 135px;
     margin-top: 5px;
-    font-family: "Anton", sans-serif;
+    font-family: $anton-font;
     font-weight: 400;
     @include font(92px, 100%);
     width: 100%;
@@ -41,19 +49,27 @@
     background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media (max-width: 768px) {
+      margin-bottom: 95px;
+      @include font(54px, 100%);
+      text-align: center;
+    }
   }
   &__social-media {
     display: flex;
     justify-content: space-between;
     gap: 70;
     margin-bottom: 40px;
-    
-
+    @media (max-width: 768px) {
+      gap: 15;
+      width: 100%;
+    }
   }
   &__social-media-item {
     @include size(52px, 52px);
-  }
-  &__social-media-links {
+    @media (max-width: 768px) {
+      @include size(40px, 40px);
+    }
   }
   &__instagram-light,
   &__figma-light,
@@ -74,6 +90,7 @@
   .greetings-button-text {
     color: $white;
     padding-top: 12px;
+    @include font(20px, 20px);
   }
   &__button-icon {
     @include size(20px, 20px);

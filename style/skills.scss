@@ -1,5 +1,11 @@
 .skills {
   margin-bottom: 160px;
+  @media (max-width: 1024px) {
+    margin-bottom: 225px;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 140px;
+  }
   &__title {
     padding-bottom: 50px;
   }
@@ -8,19 +14,41 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 17;
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(1, auto);
+      grid-template-rows: repeat(4, 1fr);
+    }
+    @media (max-width: 768px) {
+      gap:10px;
+    }
   }
   &__item {
     display: flex;
     gap: 20;
     @include shell(#010101, #737373, 10px);
     padding: 40px 50px 60px 40px;
-    width: calc((755.5 * 100%) / 1530);
     width: 100%;
+    &-title {
+      margin: 0;
+      margin-bottom: 10px;
+      font-weight: 500;
+      @include font(36px, 100%);
+      letter-spacing: -0.05em;
+      color: $white;
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 0px 30px;
+    }
   }
   &__stats {
     position: relative;
     @include size(220px, 220px);
-    &:hover .skills__icon{
+    &:hover .skills__icon {
       cursor: pointer;
       animation-play-state: paused;
     }
@@ -28,7 +56,7 @@
 
   &__figures {
     position: absolute;
-    top: 40%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     @include font(36px, 100%);
@@ -46,20 +74,22 @@
   &__content {
     width: calc((425.5 * 100%) / 665.5);
     padding-top: 40px;
+    @media (max-width: 768px) {
+      width: 100%;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 20px;
+    }
   }
-  &__item-title {
-    margin: 0;
-    margin-bottom: 10px;
-    font-weight: 500;
-    @include font(36px, 100%);
-    letter-spacing: -0.05em;
-    color: $white;
-  }
+  
   &__text {
-    margin: 0;
     @include font(20px, 100%);
     letter-spacing: -0.05em;
     color: $white;
+    @media (max-width: 768px) {
+      text-align: center;
+
+    }
   }
 }
 .theme__checkbox {
@@ -82,11 +112,11 @@
     }
   }
 }
-@keyframes rotate-stats{
-  0%{
+@keyframes rotate-stats {
+  0% {
     transform: rotateX(0deg);
   }
-  100%{
+  100% {
     transform: rotate(360deg);
   }
 }

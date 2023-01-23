@@ -9,10 +9,6 @@
   width: $wh;
   height: $ht;
 }
-@mixin padding-top-bottom($top, $bootom) {
-  padding-top: $basic-indent * $top;
-  padding-bottom: $basic-indent * $bootom;
-}
 
 @mixin shell($background, $border-color, $border-radius) {
   background: $background;

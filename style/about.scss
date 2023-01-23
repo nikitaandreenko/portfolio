@@ -1,9 +1,20 @@
 .about {
-    margin-bottom: 330px;
+  margin-bottom: 330px;
+  @media (max-width: 1024px) {
+    margin-bottom: 300px;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 180px;
+  }
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    @media (max-width: 920px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, auto);
+      gap: 50px;
+    }
   }
   &__text {
     align-self: center;
@@ -12,18 +23,37 @@
     font-weight: 500;
     letter-spacing: -0.05em;
     color: $white;
+    @media (max-width: 1024px) {
+      @include font(28px, 28px);
+    }
+    @media (max-width: 920px) {
+      width: 100%;
+    }
+    @media (max-width: 430px) {
+      @include font(22px, 105%);
+    }
   }
 
-  &__skills-text-span {
-    display: inline-block;
-    padding-top: 7px;
-    background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  &__skills{
+    order: 1;
+    &-text-span {
+      display: inline-block;
+      padding-top: 7px;
+      background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
-
   &__new-text {
     justify-self: end;
+    order: 4;
+    @media (max-width: 1024px) {
+      text-align: right;
+    }
+    @media (max-width: 920px) {
+      order: 3;
+      text-align: left;
+    }
     &-green {
       display: inline-block;
       padding-top: 7px;
@@ -40,6 +70,7 @@
     }
   }
   &__extra-text {
+    order: 5;
     &-name {
       display: inline-block;
       padding-top: 7px;
@@ -60,6 +91,9 @@
     gap: 40;
     margin-bottom: 76px;
     align-items: center;
+    @media (max-width: 768px) {
+      margin-bottom: 50px;
+    }
   }
 
   &__title-icon-light {
@@ -67,9 +101,41 @@
   }
   &__title-icon-box {
     @include size(266.74px, 29.45px);
+    @media (max-width: 1120px) {
+      @include size(99px, 19px);
+    }
+    @media (max-width: 920px) {
+      display: none;
+    }
+    
   }
   &__image-box {
     @include size(100%, 530px);
+    &-italy {
+      order: 2;
+      @media (max-width: 1024px) {
+        @include size(100%, 522.53px);
+        @media (max-width: 920px) {
+          @include size(100%, 467px);
+        }
+      }
+    }
+    &-hobby {
+      order: 3;
+      @media (max-width: 1024px) {
+        @include size(100%, 460px);
+      }
+      @media (max-width: 920px) {
+        order: 4;
+        @include size(100%, 460px);
+      }
+    }
+    &-sea {
+      order: 6;
+      @media (max-width: 1024px) {
+        @include size(100%, 416.05px);
+      }
+    }
   }
   &__image {
     @include size(100%, 100%);
@@ -93,8 +159,8 @@
         }
       }
     }
-    .about__text{
-        color: $dark-text;
+    .about__text {
+      color: $dark-text;
     }
   }
 }
