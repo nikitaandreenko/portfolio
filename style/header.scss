@@ -94,6 +94,9 @@
     @media (max-width: 1400px) {
       top: 60px;
     }
+    @media (max-width: 1100px) {
+      top: 50px;
+    }
 
     &-input-container {
       display: flex;
@@ -101,6 +104,12 @@
       padding: 20px;
       height: 100%;
       gap: 10px;
+      @media (max-width: 1100px) {
+        gap: 0;      
+      }
+      @media (max-width: 768px) {
+        padding: 0px;
+      }
     }
     &-input {
       display: flex;
@@ -137,9 +146,9 @@
     &-image {
       &-box {
         position: relative;
-        @include size(100%, auto);
+        @include size(100%, auto); 
       }
-      @include size(100%, auto);
+      @include size(100%, 100%);
     }
   }
   &__menu-burger {
